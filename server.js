@@ -1,3 +1,4 @@
+var PORT=process.env.PORT||5000;
 var http=require('http');
 var fs=require('fs');
 var path=require('path');
@@ -41,4 +42,7 @@ else
     res.end("page not found");
 }
 // console.log(req.url);
-}).listen(5000);
+}).listen (PORT,function(){
+    console.log("server running at "+ PORT);
+
+});
